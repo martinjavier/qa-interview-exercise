@@ -37,14 +37,14 @@ Then('Click On Reset All button', async function() {
     fixture.logger.info('The Reset All button was selected');
 })
 
-Then('Input Genda$ into the Search field', async function() {
-    preferredPartnersPage.inputValueOnSearch('Genda$');
-    fixture.logger.info('Input a value into the search field');
+Then('Input invalid value into the Search field', async function() {
+    preferredPartnersPage.invalidInputOnSearch();
+    fixture.logger.info('Input an invalid value into the search field');
 })
 
-Then('Input Genda into the Search field', async function() {
-    preferredPartnersPage.inputValueOnSearch('Genda');
-    fixture.logger.info('Input a value into the search field');
+Then('Input valid value into the Search field', async function() {
+    preferredPartnersPage.validInputOnSearch();
+    fixture.logger.info('Input valid value into the search field');
 })
 
 Then('Clean the Search Field', async function() {

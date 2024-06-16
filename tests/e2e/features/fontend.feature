@@ -23,14 +23,14 @@ Feature: Partners E2E test
         Then Verify if Computer Vision Hazard Detection card is visible
         Then Verify just two cards are visible
         Then Click On Reset All button
-        Then Input Genda$ into the Search field
+        Then Input invalid value into the Search field
         Then Clean the Search Field
-        Then Input Genda into the Search field
+        Then Input valid value into the Search field
         Then Click On Search Button
         Then Click On Read More Link
         Then Click On Submit Your Message Button
         Then Verify Form Multiple Errors
-        Then Input User Name On Request An Introduction Form
+        Then Input Name On Request An Introduction Form
         Then Input Invalid Email On Request An Introduction Form
         Then Click On Submit Your Message Button
         Then Verify Email Invalid Format Error Message

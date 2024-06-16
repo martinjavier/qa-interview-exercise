@@ -46,10 +46,16 @@ export default class PreferredPartnersPage {
         expect(verifyElement).toBeVisible()
     }
 
-    async inputValueOnSearch(value: string) {
-        await this.page.locator('xpath=//input[@type="text"][@class="form-control search-bar ng-untouched ng-pristine ng-valid"]').fill(value);
+    async invalidInputOnSearch() {
+        await this.page.locator('xpath=//input[@type="text"][@class="form-control search-bar ng-untouched ng-pristine ng-valid"]').fill('Genda$');
+        const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+        await delay(5000);
         const verifyElement = await this.page.locator('xpath=//div[contains[text(),"The search only allow A-Z a-z À-ÿ 0-9 and the special characters:-_\'. Please enter a valid value on the search."]')
         expect(verifyElement).toBeVisible()
+    }
+
+    async validInputOnSearch() {
+        await this.page.locator('xpath=//input[@type="text"][@class="form-control search-bar ng-untouched ng-pristine ng-valid"]').fill('Genda');
     }
 
     async cleanTheSearchField() {

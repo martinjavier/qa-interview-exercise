@@ -4,7 +4,7 @@ import { createLogger } from "winston";
 import { loggerOptions } from "../utils/logger/logger";
 import { fixture } from "../utils/fixture";
 
-const headlessMode: boolean = process.env.HEADLESS === 'false' || false;
+const headlessMode: boolean = process.env.HEADLESS === 'true' || false;
 const trace: string = process.env.TRACE ?? 'false';
 const har: string = process.env.HAR ?? 'false';
 
