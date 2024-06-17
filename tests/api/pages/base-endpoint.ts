@@ -38,4 +38,19 @@ export default class BaseEndpoint {
     }
   }
 
+  async sendPostRequestWithoutToken() {
+    try {
+      const apiRequest= fixture.api;
+      const response = await apiRequest.post(`${this.baseUrl}${this.endpoint}`, {
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      return response;
+    } catch (error) {
+      fixture.logger.info(`Error getting the "${this.endpoint}" `,error);
+      throw error;
+    }
+  }
+
 }
