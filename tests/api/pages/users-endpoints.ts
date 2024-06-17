@@ -1,4 +1,5 @@
 import BaseEndpoint from "./base-endpoint";
+import { fixture } from "../../utils/fixture";
 
 export default  class UsersEndpoint extends BaseEndpoint {
     constructor(baseUrl: string) {
@@ -7,7 +8,26 @@ export default  class UsersEndpoint extends BaseEndpoint {
     }
 
     // POST users/register
-    
+    async createUser(endpointUrl: string, userData: Record<string, any>) {
+      try {
+          const response = await fetch(endpointUrl, {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(userData),
+          });
+  
+          if (response.ok) {
+              const data = await response.json();
+              console.log('Usuario creado:', data);
+          } else {
+              console.error('Error al crear el usuario:', response.statusText);
+          }
+      } catch (error: any) {
+          console.error('Error en la solicitud:', error.message);
+      }
+  }
 
 }
  

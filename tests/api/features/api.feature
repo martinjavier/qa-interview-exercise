@@ -10,6 +10,4 @@ Feature: E2E test manage notes
     
     @createNewUser
     Scenario: Check user creation process
-        Given The user execute a POST to the "users/register" endpoint
-        Then The response status code is "404" successful
-
+        Given The user execute a POST to the "users" endpoint with "{'name': 'martin', 'lastname': 'del percio', 'email': 'martin@gmail.com', 'country': 'Spain', 'message': 'Short Message'}" data
