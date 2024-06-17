@@ -25,6 +25,11 @@ function postEndpoint(name: string) {
     } else {
         console.log("The endpoint '" + name + "' is not implemented");
     }
+    if (name === "users/login") {
+        return usersEndpoint;
+    } else {
+        console.log("The endpoint '" + name + "' is not implemented");
+    }
 }
 
 export { getEndpoint, postEndpoint };

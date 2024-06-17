@@ -15,7 +15,7 @@ https://smartservices.axaxl.com/
 
 * Key pages such as the homepage, product pages, and contact pages should be accessible and functional. 
 
-### Test Steps: 
+### Test Steps: ok
 
 1. Navigate to the AXA website homepage
 2. Accept the cookies
@@ -38,19 +38,19 @@ https://smartservices.axaxl.com/
       
 ### Additional Challenges: 
 
-* Implement cross-browser testing to ensure compatibility with different web browsers (Firefox, Chrome, Safari). 
+* Implement cross-browser testing to ensure compatibility with different web browsers (Firefox, Chrome, Safari).  ok
 
-* Validate the responsiveness of the website across various device resolutions, such as desktop, tablet, and mobile.
+* Validate the responsiveness of the website across various device resolutions, such as desktop, tablet, and mobile. ok
 
 ### Assessment Criteria: 
 
-* Effective creation of automated test scripts to navigate and interact with the AXA website.  
+* Effective creation of automated test scripts to navigate and interact with the AXA website.  ok
 
-* Utilization of Cucumber, TypeScript and Playwright to handle interactions and validations across different pages and elements. 
+* Utilization of Cucumber, TypeScript and Playwright to handle interactions and validations across different pages and elements. ok
 
 * Documentation of test cases and results, including any potential issues encountered during the test. 
 
-* Pushing the automation code to a GitHub repository. 
+* Pushing the automation code to a GitHub repository. ok
 
 
 ## Task 2: Functional API Testing on Manage Notes API  
@@ -70,9 +70,9 @@ API documentation URL
   
 ### Test Steps: 
 
-1. Create new user account 
+1. Create new user account (ok)
 
-2. Login as an existing user 
+2. Login as an existing user ()
 
 3. Get profile information correctly and validate: 
 

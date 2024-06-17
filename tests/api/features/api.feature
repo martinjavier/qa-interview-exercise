@@ -7,7 +7,16 @@ Feature: E2E test manage notes
         Given The user execute a GET to the "health-check" endpoint
         Then The response status code is "200" successful
         And The response message is "Notes API is Running"
-    
-    @createNewUser
-    Scenario: Check user creation process
-        Given The user execute a POST to the "users" endpoint with "{'name': 'martin', 'lastname': 'del percio', 'email': 'martin@gmail.com', 'country': 'Spain', 'message': 'Short Message'}" data
+
+    @loginUser
+    Scenario: Check user login process
+        Given The user execute a POST to the "users" endpoint for login with "martin@gmail.com" user and "ClaveSecreta" password
+        Then The response status code is "200" successful
+        And The response message is "Login successful"
+
+    @getProfileInformation
+    Scenario: Check the getting of profile information
+        Given The user execute a GET to the "users/profile" endpoint in order to get profile information
+        Then The response status code is "200" successful
+        And The response message is "Login successful"
+
