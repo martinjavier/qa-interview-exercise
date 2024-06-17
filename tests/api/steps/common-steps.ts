@@ -21,7 +21,7 @@ Then('The response message is {string}', async function (message:string) {
   fixture.logger.info(`the response message is ${message}`);
 });
 
-Then('The user execute a POST to the {string} endpoint', async function (endpointName:string) {
+Given('The user execute a POST to the {string} endpoint', async function (endpointName:string) {
   this.endpoint = postEndpoint(endpointName);
   this.response = await this.endpoint.sendPostRequestWithoutToken()
   fixture.logger.info(`The user execute a POST to the ${endpointName} endpoint`);

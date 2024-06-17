@@ -4,6 +4,10 @@ export default  class UsersEndpoint extends BaseEndpoint {
     constructor(baseUrl: string) {
       super(baseUrl);
       this.setEndpoint(`/users`);
-  }   
+    }
+
+    // POST users/register
+    
+
 }
  
